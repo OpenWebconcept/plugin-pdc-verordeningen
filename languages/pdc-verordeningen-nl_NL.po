@@ -1,0 +1,329 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PDC Verordeningen\n"
+"POT-Creation-Date: 2018-07-31 14:58+0200\n"
+"PO-Revision-Date: 2018-07-31 14:58+0200\n"
+"Last-Translator: Edwin Siebel <edwin@yard.nl>\n"
+"Language-Team: Edwin Siebel <edwin@yard.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:201
+msgid "New price"
+msgstr "Nieuw bedrag"
+
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:205
+msgid "Price"
+msgstr "Bedrag"
+
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:209
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:49
+msgid "Date new verordening active"
+msgstr "Datum actief nieuwe verordening"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:29
+msgid "Verordening settings"
+msgstr "Verordening instellingen"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:37
+msgid "Verordening price"
+msgstr "Verordening prijs"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:38
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:44
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:61
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:67
+msgid "Price in &euro;"
+msgstr "Prijs in &euro;"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:43
+msgid "Verordening new price"
+msgstr "Verordening nieuw bedrag"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:52
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:75
+msgid "dd-mm-yy"
+msgstr "dd-mm-yy"
+
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:59
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:82
+msgid "(dd-mm-yy)"
+msgstr "(dd-mm-yy)"
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:42
+msgctxt "post type general name"
+msgid "Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:43
+msgctxt "post type singular name"
+msgid "Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:44
+msgctxt "admin menu"
+msgid "Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:45
+msgctxt "add new on admin bar"
+msgid "Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:46
+msgctxt "Verordening"
+msgid "Add new Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:47
+msgid "Add new Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:48
+msgid "New Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:49
+msgid "Edit Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:50
+msgid "View Verordening"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:51
+msgid "All Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:52
+msgid "Search Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:53
+msgid "Parent Verordeningen:"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:54
+msgid "No Verordeningen found."
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:55
+msgid "No Verordeningen found in Trash."
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:60
+msgid "PDC Verordeningen"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:75
+msgid "Verordening price (in &euro;)"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:79
+msgid "Verordening new price (in &euro;)"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:83
+msgid "Date new Verordening active"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:88
+msgid "Verordening shortcode"
+msgstr ""
+
+#: src/Verordeningen/PostType/VerordeningPostTypeServiceProvideren.php:94
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/functions.php:61
+msgid "Post types must be registered on the \"init\" hook."
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/functions.php:134
+msgid "Taxonomies must be registered on the \"init\" hook."
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:673
+msgid "Author"
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:975
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:1002
+#, php-format
+msgid "Invalid connection type: %s"
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt.php:692
+#, php-format
+msgid ""
+"Post type query var \"%s\" clashes with a taxonomy query var of the same name"
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy-admin.php:422
+msgid "Not specified"
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy.php:222
+#, php-format
+msgid ""
+"Taxonomy query var \"%s\" clashes with a post type query var of the same name"
+msgstr ""
+
+#: src/Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy.php:228
+#, php-format
+msgid "Taxonomy query var \"%s\" is not allowed"
+msgstr ""
+
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:52
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:88
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:94
+msgid "Verordening settings"
+msgstr ""
+
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:60
+msgid "Verordening price"
+msgstr ""
+
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:66
+msgid "Verordening new price"
+msgstr ""
+
+#: tests/Unit/Verordeningen/Metabox/MetaboxServiceProviderTest.php:72
+msgid "Date new verordening active"
+msgstr ""
+
+#~ msgctxt "post type general name"
+#~ msgid "Verordeningen"
+#~ msgstr "Verordeningen"
+
+#~ msgctxt "post type singular name"
+#~ msgid "Verordening"
+#~ msgstr "Verordening"
+
+#~ msgctxt "admin menu"
+#~ msgid "Verordeningen"
+#~ msgstr "Verordeningen"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "Verordeningen"
+#~ msgstr "Verordeningen"
+
+#~ msgctxt "verordening"
+#~ msgid "Add new verordening"
+#~ msgstr "Voeg nieuwe verordening toe"
+
+#~ msgid "Add new verordening"
+#~ msgstr "Voeg nieuwe verordening toe"
+
+#~ msgid "New verordening"
+#~ msgstr "Nieuwe verordening"
+
+#~ msgid "Edit verordening"
+#~ msgstr "Bewerk verordening"
+
+#~ msgid "View verordening"
+#~ msgstr "Bekijk verordening"
+
+#~ msgid "All verordeningen"
+#~ msgstr "Alle verordeningen"
+
+#~ msgid "Search verordeningen"
+#~ msgstr "Zoek verordeningen"
+
+#~ msgid "Parent verordeningen:"
+#~ msgstr "Hoofd verordeningen pagina:"
+
+#~ msgid "No verordeningen found."
+#~ msgstr "Geen verordeningen gevonden."
+
+#~ msgid "No verordeningen found in Trash."
+#~ msgstr "Geen verordeningen gevonden in prullenbak."
+
+#~ msgid "PDC verordeningen"
+#~ msgstr "PDC verordeningen"
+
+#~ msgid "Verordening price (in &euro;)"
+#~ msgstr "Verordening prijs (in &euro;)"
+
+#~ msgid "Verordening new price (in &euro;)"
+#~ msgstr "Nieuwe verordening prijs (in &euro;)"
+
+#~ msgid "Verordening shortcode"
+#~ msgstr "Verordening shortcode"
+
+#~ msgctxt "post type general name"
+#~ msgid "PDC verordeningen"
+#~ msgstr "PDC verordeningen"
+
+#~ msgctxt "post type singular name"
+#~ msgid "PDC verordening"
+#~ msgstr "PDC verordening"
+
+#~ msgctxt "admin menu"
+#~ msgid "PDC verordeningen"
+#~ msgstr "PDC verordeningen"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "PDC verordeningen"
+#~ msgstr "PDC verordeningen"
+
+#~ msgctxt "verordening"
+#~ msgid "Add new pdc verordening"
+#~ msgstr "Voeg nieuwe PDC verordening toe"
+
+#~ msgid "Add new pdc verordening"
+#~ msgstr "Voeg nieuwe PDC verordening toe"
+
+#~ msgid "New PDC verordening"
+#~ msgstr "Nieuwe PDC verordening"
+
+#~ msgid "Edit PDC verordening"
+#~ msgstr "Bewerk PDC verordening"
+
+#~ msgid "View PDC verordening"
+#~ msgstr "Bekijk PDC verordening"
+
+#~ msgid "All PDC verordeningen"
+#~ msgstr "Alle PDC verordeningen"
+
+#~ msgid "Search PDC verordeningen"
+#~ msgstr "Zoek PDC verordeningen"
+
+#~ msgid "Parent PDC verordeningen:"
+#~ msgstr "Hoofd PDC verordening:"
+
+#~ msgid "No PDC verordeningen found."
+#~ msgstr "Geen PDC verordeningen gevonden."
+
+#~ msgid "No PDC verordeningen found in Trash."
+#~ msgstr "Geen PDC verordeningen gevonden in prullenbak."
+
+#~ msgid "Add new pdc Verordening"
+#~ msgstr "Voeg nieuwe PDC verordening toe"
+
+#~ msgid "Add new Verordening"
+#~ msgstr "Voeg nieuwe verordening toe"
+
+#~ msgid "Edit Verordening"
+#~ msgstr "Bewerk verordening"
+
+#~ msgid "Verordeningen"
+#~ msgstr "Verordeningen"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "Verordening"
+#~ msgstr "Verordening"
+
+#~ msgid "This link does not work, go to our website: <a href=\"%s\">%s</a>"
+#~ msgstr "Deze link werkt niet, bekijk onze website: <a href=\"%s\">%s</a>"

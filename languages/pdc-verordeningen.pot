@@ -1,0 +1,188 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PDC Verordeningen\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-31 14:57+0200\n"
+"POT-Revision-Date: Fri Nov 27 2015 13:26:26 GMT+0100 (W. Europe Standard Time)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: Yard Digital <inf@yard.nl>\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../src\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: ../assets\n"
+"X-Poedit-SearchPathExcluded-1: ../node_modules\n"
+"X-Poedit-SearchPathExcluded-2: ../vendor\n"
+
+#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:201
+msgid "New price"
+msgstr ""
+
+#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:205
+msgid "Price"
+msgstr ""
+
+#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:209
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:49
+msgid "Date new lege active"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:29
+msgid "Lege settings"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:37
+msgid "Lege price"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:38
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:44
+msgid "Price in &euro;"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:43
+msgid "Lege new price"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:52
+msgid "dd-mm-yy"
+msgstr ""
+
+#: Verordeningen/Metabox/MetaboxServiceProvider.php:59
+msgid "(dd-mm-yy)"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:42
+msgctxt "post type general name"
+msgid "Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:43
+msgctxt "post type singular name"
+msgid "Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:44
+msgctxt "admin menu"
+msgid "Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:45
+msgctxt "add new on admin bar"
+msgid "Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:46
+msgctxt "Verordening"
+msgid "Add new Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:47
+msgid "Add new Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:48
+msgid "New Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:49
+msgid "Edit Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:50
+msgid "View Verordening"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:51
+msgid "All Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:52
+msgid "Search Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:53
+msgid "Parent Verordeningen:"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:54
+msgid "No Verordeningen found."
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:55
+msgid "No Verordeningen found in Trash."
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:60
+msgid "PDC Verordeningen"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:75
+msgid "Verordening price (in &euro;)"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:79
+msgid "Verordening new price (in &euro;)"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:83
+msgid "Date new Verordening active"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:88
+msgid "Verordening shortcode"
+msgstr ""
+
+#: Verordeningen/PostType/LegesPostTypeServiceProvider.php:94
+msgid "Published"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/functions.php:61
+msgid "Post types must be registered on the \"init\" hook."
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/functions.php:134
+msgid "Taxonomies must be registered on the \"init\" hook."
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:673
+msgid "Author"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:975
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt-admin.php:1002
+#, php-format
+msgid "Invalid connection type: %s"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-cpt.php:692
+#, php-format
+msgid ""
+"Post type query var \"%s\" clashes with a taxonomy query var of the same name"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy-admin.php:422
+msgid "Not specified"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy.php:222
+#, php-format
+msgid ""
+"Taxonomy query var \"%s\" clashes with a post type query var of the same name"
+msgstr ""
+
+#: Verordeningen/vendor/johnbillion/extended-cpts/src/class-extended-taxonomy.php:228
+#, php-format
+msgid "Taxonomy query var \"%s\" is not allowed"
+msgstr ""
