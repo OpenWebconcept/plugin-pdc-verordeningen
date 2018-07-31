@@ -105,14 +105,6 @@ class QuickEditServiceProvider extends ServiceProvider
 					<?php } ?>
 				});
 			});
-
-
-
-
-
-
-
-
 		</script>
 		<?php
 	}
@@ -165,7 +157,7 @@ class QuickEditServiceProvider extends ServiceProvider
 	/**
 	 * @param $item
 	 */
-	protected function Price($item)
+	protected function Link($item)
 	{
 		$value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
 		<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
@@ -178,7 +170,7 @@ class QuickEditServiceProvider extends ServiceProvider
 	/**
 	 * @param $item
 	 */
-	protected function NewPrice($item)
+	protected function NewLink($item)
 	{
 		$value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
 		<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
@@ -196,13 +188,13 @@ class QuickEditServiceProvider extends ServiceProvider
 	public function setQuickEditHandlers()
 	{
 		return $this->quickEditHandlers = [
-			'new-price'   => [
-				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'new-price'),
-				'label'      => __('New price', 'pdc-verordeningen')
+			'new-link'   => [
+				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'new-link'),
+				'label'      => __('New link', 'pdc-verordeningen')
 			],
-			'price'       => [
-				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'price'),
-				'label'      => __('Price', 'pdc-verordeningen')
+			'link'       => [
+				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'link'),
+				'label'      => __('Link', 'pdc-verordeningen')
 			],
 			'active-date' => [
 				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'active-date'),

@@ -37,8 +37,6 @@ $autoloader = new Autoloader();
  * and wp_loaded action hooks.
  */
 
-$plugin = new Plugin(__DIR__);
-
-add_action('plugins_loaded', function () use ($plugin) {
-    $plugin->boot();
-}, 9);
+add_action('plugins_loaded', function () {
+	$plugin = (new Plugin(__DIR__))->boot();
+}, 10);

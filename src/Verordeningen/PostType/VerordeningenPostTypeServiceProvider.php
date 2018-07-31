@@ -11,7 +11,7 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
 	/**
 	 * @var string
 	 */
-	protected $prefix = '_pdc-Verordening';
+	protected $prefix = '_pdc-verordening';
 
 	/**
 	 * Name of posttype.
@@ -71,13 +71,13 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
 			'show_in_feed'       => false,
 			'archive'            => false,
 			'admin_cols'         => [
-				'price'        => [
-					'title'    => __('Verordening price (in &euro;)', 'pdc-verordeningen'),
-					'meta_key' => "{$this->prefix}-price",
+				'link'        => [
+					'title'    => __('Verordening link', 'pdc-verordeningen'),
+					'meta_key' => "{$this->prefix}-link",
 				],
-				'new-price'    => [
-					'title'    => __('Verordening new price (in &euro;)', 'pdc-verordeningen'),
-					'meta_key' => "{$this->prefix}-new-price",
+				'new-link'    => [
+					'title'    => __('Verordening new link', 'pdc-verordeningen'),
+					'meta_key' => "{$this->prefix}-new-link",
 				],
 				'active-date'  => [
 					'title'       => __('Date new Verordening active', 'pdc-verordeningen'),
