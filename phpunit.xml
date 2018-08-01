@@ -9,11 +9,10 @@
 	processIsolation="false"
 	stopOnError="false"
 	stopOnFailure="false"
-	syntaxCheck="true"
 	verbose="true"
 >
 	<testsuites>
-		<testsuite name="Unit Test">
+		<testsuite name="Unit Test Suite">
 			<directory suffix="Test.php">./tests/Unit</directory>
 		</testsuite>
 	</testsuites>

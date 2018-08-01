@@ -47,13 +47,13 @@ class QuickEditServiceProviderTest extends TestCase
 		$this->plugin->loader = m::mock(Loader::class);
 
 		$this->stub = [
-			'new-price'   => [
-				'metaboxKey' => 'new-price',
-				'label'      => 'New price'
+			'new-link'   => [
+				'metaboxKey' => 'new-link',
+				'label'      => 'New link'
 			],
-			'price'       => [
-				'metaboxKey' => 'price',
-				'label'      => 'Price'
+			'link'       => [
+				'metaboxKey' => 'link',
+				'label'      => 'Link'
 			],
 			'active-date' => [
 				'metaboxKey' => 'active-date',
@@ -122,15 +122,15 @@ class QuickEditServiceProviderTest extends TestCase
 		WP_Mock::userFunction('get_post_meta', [
 			'times'           => 3,
 			'return_in_order' => [
-				'130',
-				'120',
+				'www.google.com',
+				'www.yahoo.com',
 				'23-05-2018'
 			]
 		]);
 
 		$this->service->setQuickEditHandlers();
 		$actual                           = $this->service->addRowActions($actions, $this->post);
-		$expected['inline hide-if-no-js'] = '<a href="#" data-new-price="130" data-price="120" data-active-date="23-05-2018" class="editinline" aria-label="&#8220;Verordening 1&#8221; snel bewerken">Snel&nbsp;bewerken</a>';
+		$expected['inline hide-if-no-js'] = '<a href="#" data-new-link="www.google.com" data-link="www.yahoo.com" data-active-date="23-05-2018" class="editinline" aria-label="&#8220;Verordening 1&#8221; snel bewerken">Snel&nbsp;bewerken</a>';
 
 		$this->assertEquals($expected, $actual);
 	}
@@ -145,14 +145,14 @@ class QuickEditServiceProviderTest extends TestCase
 			'times'           => 3,
 			'return_in_order' => [
 				null,
-				'120',
+				'www.yahoo.com',
 				'23-05-2018'
 			]
 		]);
 
 		$this->service->setQuickEditHandlers();
 		$actual                           = $this->service->addRowActions($actions, $this->post);
-		$expected['inline hide-if-no-js'] = '<a href="#" data-price="120" data-active-date="23-05-2018" class="editinline" aria-label="&#8220;Verordening 1&#8221; snel bewerken">Snel&nbsp;bewerken</a>';
+		$expected['inline hide-if-no-js'] = '<a href="#" data-link="www.yahoo.com" data-active-date="23-05-2018" class="editinline" aria-label="&#8220;Verordening 1&#8221; snel bewerken">Snel&nbsp;bewerken</a>';
 
 		$this->assertEquals($expected, $actual);
 	}
@@ -217,7 +217,7 @@ class QuickEditServiceProviderTest extends TestCase
 
 		$this->service->setQuickEditHandlers();
 
-		$_POST['_pdc-verordening-price'] = '10';
+		$_POST['_pdc-verordening-link'] = 'www.yahoo.com';
 
 		WP_Mock::userFunction('update_post_meta', [
 			'times'  => 1,

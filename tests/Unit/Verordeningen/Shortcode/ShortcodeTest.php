@@ -108,6 +108,11 @@ class TestShortcode extends TestCase
 			]
 		);
 
+		\WP_Mock::userFunction('get_the_title', [
+			'args' => $this->postID,
+			'return' => 'test'
+		]);
+
 		\WP_Mock::passthruFunction('absint', [
 			'return_args' => 1
 		]);
@@ -119,8 +124,8 @@ class TestShortcode extends TestCase
 				],
 				'return' => [
 					'_pdc-verordening-active-date' => null,
-					'_pdc-verordening-price'       => 10,
-					'_pdc-verordening-new-price'   => null,
+					'_pdc-verordening-link'       => 'www.yahoo.com',
+					'_pdc-verordening-new-link'   => null,
 				]
 			]
 		);
@@ -130,7 +135,7 @@ class TestShortcode extends TestCase
 		];
 
 		$actual   = $this->service->addShortcode($attributes);
-		$expected = '<span>&euro; 10</span>';
+		$expected = '<a href="www.yahoo.com" class="pdc-verordening-link" title="test">test</a>';
 
 		$this->assertEquals($actual, $expected);
 	}
@@ -148,6 +153,11 @@ class TestShortcode extends TestCase
 			]
 		);
 
+		\WP_Mock::userFunction('get_the_title', [
+			'args' => $this->postID,
+			'return' => 'test'
+		]);
+
 		\WP_Mock::passthruFunction('absint', [
 			'return_args' => 1
 		]);
@@ -158,8 +168,8 @@ class TestShortcode extends TestCase
 					$this->postID
 				],
 				'return' => [
-					'_pdc-verordening-price'       => 10,
-					'_pdc-verordening-new-price'   => 20,
+					'_pdc-verordening-link'       => 'www.yahoo.com',
+					'_pdc-verordening-new-link'   => 'www.google.com',
 					'_pdc-verordening-active-date' => '23-05-3000',
 				]
 			]
@@ -170,13 +180,13 @@ class TestShortcode extends TestCase
 		];
 
 		$actual   = $this->service->addShortcode($attributes);
-		$expected = '<span>&euro; 10</span>';
+		$expected = '<a href="www.yahoo.com" class="pdc-verordening-link" title="test">test</a>';
 
 		$this->assertEquals($actual, $expected);
 	}
 
 	/** @test */
-	public function shortcode_is_rendered_correctly_when_date_is_active_but_price_is_not()
+	public function shortcode_is_rendered_correctly_when_date_is_active_but_link_is_not()
 	{
 		\WP_Mock::passthruFunction('shortcode_atts', [
 			'return_arg' => 1
@@ -187,6 +197,11 @@ class TestShortcode extends TestCase
 				'return' => true
 			]
 		);
+
+		\WP_Mock::userFunction('get_the_title', [
+			'args' => $this->postID,
+			'return' => 'test'
+		]);
 
 		\WP_Mock::passthruFunction('absint', [
 			'return_args' => 1
@@ -199,8 +214,8 @@ class TestShortcode extends TestCase
 				],
 				'return' => [
 					'key'                   => 'value',
-					'_pdc-verordening-price'       => 10,
-					'_pdc-verordening-new-price'   => null,
+					'_pdc-verordening-link'       => 'www.yahoo.com',
+					'_pdc-verordening-new-link'   => null,
 					'_pdc-verordening-active-date' => '06-05-2018',
 				]
 			]
@@ -211,7 +226,7 @@ class TestShortcode extends TestCase
 		];
 
 		$actual   = $this->service->addShortcode($attributes);
-		$expected = '<span>&euro; 0</span>';
+		$expected = '<a href="" class="pdc-verordening-link" title="test">test</a>';
 
 		$this->assertEquals($actual, $expected);
 	}
@@ -229,6 +244,11 @@ class TestShortcode extends TestCase
 			]
 		);
 
+		\WP_Mock::userFunction('get_the_title', [
+			'args' => $this->postID,
+			'return' => 'test'
+		]);
+
 		\WP_Mock::passthruFunction('absint', [
 			'return_args' => 1
 		]);
@@ -239,8 +259,8 @@ class TestShortcode extends TestCase
 					$this->postID
 				],
 				'return' => [
-					'_pdc-verordening-price'       => 10,
-					'_pdc-verordening-new-price'   => 20,
+					'_pdc-verordening-link'       => 'www.yahoo.com',
+					'_pdc-verordening-new-link'   => 'www.google.com',
 					'_pdc-verordening-active-date' => '06-05-2018',
 				]
 			]
@@ -251,7 +271,7 @@ class TestShortcode extends TestCase
 		];
 
 		$actual   = $this->service->addShortcode($attributes);
-		$expected = '<span>&euro; 20</span>';
+		$expected = '<a href="www.google.com" class="pdc-verordening-link" title="test">test</a>';
 
 		$this->assertEquals($actual, $expected);
 	}

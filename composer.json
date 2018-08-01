@@ -17,11 +17,11 @@
   ],
   "require": {
     "php": ">=7.0",
-    "plugin/pdc-base": "dev-feat-namespace"
+    "plugin/pdc-base": "dev-master"
   },
   "require-dev": {
     "mockery/mockery": "1.0.*",
-    "phpunit/phpunit": "~6.0",
+    "phpunit/phpunit": "~7.0",
     "10up/wp_mock": "dev-master",
     "phpmd/phpmd": "@stable"
   },
@@ -32,9 +32,9 @@
     }
   },
   "scripts": {
-    "unit": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test' --colors=always",
-    "unit-coverage": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test' --colors=always --coverage-html ./tests/coverage",
-    "integration": "clear && ./vendor/bin/phpunit  --testsuite 'Integration Test' --colors=always",
+    "unit": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test Suite' --colors=always",
+    "unit-coverage": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test Suite' --colors=always --coverage-html ./tests/coverage",
+    "integration": "clear && ./vendor/bin/phpunit  --testsuite 'Integration Test Suite' --colors=always",
     "test": [
       "@unit",
       "@integration"

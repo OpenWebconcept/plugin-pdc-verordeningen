@@ -11,9 +11,9 @@ class Shortcode
 	 * @var array
 	 */
 	protected $defaults = [
-		'_pdc-verordeningen-active-date' => null,
-		'_pdc-verordeningen-link'       => null,
-		'_pdc-verordeningen-new-link'   => null,
+		'_pdc-verordening-active-date' => null,
+		'_pdc-verordening-link'       => null,
+		'_pdc-verordening-new-link'   => null,
 	];
 
 	/**
@@ -40,15 +40,15 @@ class Shortcode
 
 		$id         = absint($attributes['id']);
 		$metaData   = $this->mergeWithDefaults(get_metadata('post', $id));
-		$link      = $metaData['_pdc-verordeningen-link'];
-		$newlink   = $metaData['_pdc-verordeningen-new-link'];
-		$dateActive = $metaData['_pdc-verordeningen-active-date'];
+		$link      = $metaData['_pdc-verordening-link'];
+		$newlink   = $metaData['_pdc-verordening-new-link'];
+		$dateActive = $metaData['_pdc-verordening-active-date'];
 
 		if ( $this->hasDate($dateActive) AND $this->dateIsNow($dateActive) ) {
 			$link = $newlink;
 		}
 
-		$format = apply_filters('owc/pdc/verordeningen/shortcode/format', '<a href="%1$s" title="%2$s">%2$s</span>');
+		$format = apply_filters('owc/pdc/verordeningen/shortcode/format', '<a href="%1$s" class="pdc-verordening-link" title="%2$s">%2$s</a>');
 		$output = sprintf($format, $link, get_the_title($id));
 		$output = apply_filters('owc/pdc/verordeningen/shortcode/after-format', $output);
 

@@ -56,15 +56,15 @@ class MetaboxServiceProviderTest extends TestCase
 				'autosave'   => true,
 				'fields'     => [
 					[
-						'id'   => "{$prefix}-price",
-						'name' => __('Verordening price', 'pdc-verordeningen'),
-						'desc' => __('Price in &euro;', 'pdc-verordeningen'),
+						'id'   => "{$prefix}-link",
+						'name' => __('Verordening link', 'pdc-verordeningen'),
+						'desc' => __('link', 'pdc-verordeningen'),
 						'type' => 'text',
 					],
 					[
-						'id'   => "{$prefix}-new-price",
-						'name' => __('Verordening new price', 'pdc-verordeningen'),
-						'desc' => __('Price in &euro;', 'pdc-verordeningen'),
+						'id'   => "{$prefix}-new-link",
+						'name' => __('Verordening new link', 'pdc-verordeningen'),
+						'desc' => __('Link', 'pdc-verordeningen'),
 						'type' => 'text',
 					],
 					[
