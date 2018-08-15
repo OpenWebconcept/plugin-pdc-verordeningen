@@ -17,17 +17,22 @@
   ],
   "require": {
     "php": ">=7.0",
-    "plugin/pdc-base": "dev-master"
+    "plugin/pdc-base": "^2.0"
   },
   "require-dev": {
     "mockery/mockery": "1.0.*",
     "phpunit/phpunit": "~7.0",
     "10up/wp_mock": "dev-master",
-    "phpmd/phpmd": "@stable"
+    "phpdocumentor/phpdocumentor": "2.*",
+    "squizlabs/php_codesniffer": "^3.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "OWC\\PDC\\Verordeningen\\": "./src/Verordeningen"
+    }
   },
   "autoload-dev": {
     "psr-4": {
-      "OWC\\PDC\\Verordeningen\\": "./src/Verordeningen",
       "OWC\\PDC\\Verordeningen\\Tests\\": "./tests"
     }
   },
@@ -38,6 +43,9 @@
     "test": [
       "@unit",
       "@integration"
-    ]
+    ],
+    "cs": "./vendor/bin/phpcs",
+    "csfix": "./vendor/bin/phpcbf",
+    "docs": "./vendor/bin/phpdoc -d ./src/Verordeningen -t ./docs"
   }
 }

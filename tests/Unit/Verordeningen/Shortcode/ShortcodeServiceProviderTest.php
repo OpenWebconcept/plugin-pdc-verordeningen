@@ -13,86 +13,86 @@ use OWC\PDC\Verordeningen\Tests\Unit\TestCase;
 class ShortcodeServiceProviderTest extends TestCase
 {
 
-	/**
-	 * @var ShortcodeServiceProvider
-	 */
-	protected $service;
+    /**
+     * @var ShortcodeServiceProvider
+     */
+    protected $service;
 
-	/**
-	 * Shortcode object.
-	 * @var \OWC\PDC\Verordeningen\Shortcode\Shortcode
-	 */
-	private $shortcode;
+    /**
+     * Shortcode object.
+     * @var \OWC\PDC\Verordeningen\Shortcode\Shortcode
+     */
+    private $shortcode;
 
-	/**
-	 * Shortcode tag.
-	 * @var string
-	 */
-	private $tag = 'pdc::verordeningen';
+    /**
+     * Shortcode tag.
+     * @var string
+     */
+    private $tag = 'pdc::verordeningen';
 
-	/**
-	 * @var
-	 */
-	protected $config;
+    /**
+     * @var
+     */
+    protected $config;
 
-	/**
-	 * @var
-	 */
-	protected $plugin;
+    /**
+     * @var
+     */
+    protected $plugin;
 
-	/**
-	 * @var int
-	 */
-	protected $postID = 10;
+    /**
+     * @var int
+     */
+    protected $postID = 10;
 
-	public function setUp()
-	{
-		\WP_Mock::setUp();
+    public function setUp()
+    {
+        \WP_Mock::setUp();
 
-		$this->config         = m::mock(Config::class);
-		$this->plugin         = m::mock(Plugin::class);
-		$this->plugin->config = $this->config;
-		$this->plugin->loader = m::mock(Loader::class);
+        $this->config         = m::mock(Config::class);
+        $this->plugin         = m::mock(Plugin::class);
+        $this->plugin->config = $this->config;
+        $this->plugin->loader = m::mock(Loader::class);
 
-		$this->service = new ShortcodeServiceProvider($this->plugin);
+        $this->service = new ShortcodeServiceProvider($this->plugin);
 
-		$this->shortcode = new Shortcode();
-	}
+        $this->shortcode = new Shortcode();
+    }
 
-	public function tearDown()
-	{
-		\WP_Mock::tearDown();
+    public function tearDown()
+    {
+        \WP_Mock::tearDown();
 
-		$this->shortcode = null;
-	}
+        $this->shortcode = null;
+    }
 
-	/** @test */
-	public function it_registers_the_shortcode_correctly()
-	{
+    /** @test */
+    public function it_registers_the_shortcode_correctly()
+    {
 
-		\WP_Mock::userFunction('add_shortcode', [
-			'times' => 1,
-			'args'  => [
-				$this->tag,
-				[
-					$this->shortcode,
-					'addShortcode'
-				]
-			],
-		]);
+        \WP_Mock::userFunction('add_shortcode', [
+            'times' => 1,
+            'args'  => [
+                $this->tag,
+                [
+                    $this->shortcode,
+                    'addShortcode'
+                ]
+            ],
+        ]);
 
-		$this->service->register();
+        $this->service->register();
 
-		$this->assertTrue(true);
-	}
+        $this->assertTrue(true);
+    }
 
-	/** @test */
-	public function it_generate_the_code_correctly()
-	{
-		$expected = sprintf('<code>[%s id="%d"]</code>', 'pdc::verordeningen', 5);
+    /** @test */
+    public function it_generate_the_code_correctly()
+    {
+        $expected = sprintf('<code>[%s id="%d"]</code>', 'pdc::verordeningen', 5);
 
-		$actual = $this->service::generateShortcode(5);
+        $actual = $this->service::generateShortcode(5);
 
-		$this->assertEquals($expected, $actual);
-	}
+        $this->assertEquals($expected, $actual);
+    }
 }

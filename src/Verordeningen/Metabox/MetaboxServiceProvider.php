@@ -1,21 +1,32 @@
 <?php
+/**
+ * Provider which handles the metabox registration.
+ */
 
 namespace OWC\PDC\Verordeningen\Metabox;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 
+/**
+ * Provider which handles the metabox registration.
+ */
 class MetaboxServiceProvider extends ServiceProvider
 {
 
+    /**
+     * Register the providers.
+     *
+     * @return void
+     */
     public function register()
     {
         $this->plugin->loader->addFilter('rwmb_meta_boxes', $this, 'registerMetaboxes', 10, 1);
     }
 
     /**
-     * register metaboxes.
+     * Register metaboxes.
      *
-     * @param $metaboxes
+     * @param array $metaboxes
      *
      * @return array
      */
