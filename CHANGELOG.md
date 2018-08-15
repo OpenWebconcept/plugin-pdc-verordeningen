@@ -4,3 +4,4 @@
 
 ### Features:
 * Initial release
+* Add docs
