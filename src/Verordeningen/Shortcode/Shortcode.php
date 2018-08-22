@@ -108,7 +108,7 @@ class Shortcode
     }
 
     /**
-     * Return true if date from Verorveningen is smaller or equal to current date.
+     * Return true if date from Verordeningen is smaller or equal to current date.
      *
      * @param $dateActive
      *
