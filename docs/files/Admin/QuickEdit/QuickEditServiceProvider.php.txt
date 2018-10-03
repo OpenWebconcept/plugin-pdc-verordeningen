@@ -15,8 +15,8 @@ class QuickEditServiceProvider extends ServiceProvider
 {
 
     /**
-	 * Prefix for the quickedit.
-	 *
+     * Prefix for the quickedit.
+     *
      * @var string $prefix
      */
     protected $prefix = '_pdc-verordening';
@@ -29,16 +29,16 @@ class QuickEditServiceProvider extends ServiceProvider
     protected $postType = 'pdc-verordeningen';
 
     /**
-	 * Array holding all the quickedit handlers.
-	 *
+     * Array holding all the quickedit handlers.
+     *
      * @var array $quickEditHandlers
      */
     protected $quickEditHandlers = [];
 
     /**
      * Register the service provider.
-	 *
-	 * @return void
+     *
+     * @return void
      */
     public function register()
     {
@@ -52,8 +52,8 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Adds the handlers.
-	 *
+     * Adds the handlers.
+     *
      * @param array $actions
      * @param  WP_Post     $post
      *
@@ -79,8 +79,8 @@ class QuickEditServiceProvider extends ServiceProvider
 
     /**
      * Render javascript inline for admin only.
-	 *
-	 * @return mixed
+     *
+     * @return mixed
      */
     public function renderFooterScript()
     {
@@ -127,12 +127,12 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Adds the quickedit handlers.
-	 *
+     * Adds the quickedit handlers.
+     *
      * @param $columnName
      * @param $postType
-	 *
-	 * @return mixed
+     *
+     * @return mixed
      */
     public function registerQuickEditHandler($columnName, $postType)
     {
@@ -162,11 +162,11 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Adds active date to quickedit handler.
-	 *
+     * Adds active date to quickedit handler.
+     *
      * @param $item
-	 *
-	 * @return mixed
+     *
+     * @return mixed
      */
     protected function ActiveDate($item)
     {
@@ -179,11 +179,11 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Adds link to quickedit handlers.
-	 *
+     * Adds link to quickedit handlers.
+     *
      * @param $item
-	 *
-	 * @return mixed
+     *
+     * @return mixed
      */
     protected function Link($item)
     {
@@ -196,11 +196,11 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Adds newlink to quickedit handlers.
-	 *
+     * Adds newlink to quickedit handlers.
+     *
      * @param $item
-	 *
-	 * @return mixed
+     *
+     * @return mixed
      */
     protected function NewLink($item)
     {
@@ -236,12 +236,12 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Handles the save post handler.
-	 *
+     * Handles the save post handler.
+     *
      * @param $post_id
      * @param $post
-	 *
-	 * @return void
+     *
+     * @return void
      */
     public function registerSavePostHandler($post_id, $post)
     {
@@ -273,8 +273,8 @@ class QuickEditServiceProvider extends ServiceProvider
     }
 
     /**
-	 * Gets the registered quickedit handlers.
-	 *
+     * Gets the registered quickedit handlers.
+     *
      * @return array
      */
     private function getQuickEditHandlers()
