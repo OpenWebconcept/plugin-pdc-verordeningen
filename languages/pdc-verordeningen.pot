@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PDC Verordeningen\n"
-"POT-Creation-Date: 2018-10-03 11:49+0200\n"
+"POT-Creation-Date: 2018-10-03 14:03+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -65,64 +65,50 @@ msgid "(dd-mm-yy)"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:54
-msgctxt "post type general name"
+#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:56
+#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:57
 msgid "Verordeningen"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:55
-msgctxt "post type singular name"
 msgid "Verordening"
 msgstr ""
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:56
-msgctxt "admin menu"
-msgid "Verordeningen"
-msgstr ""
-
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:57
-msgctxt "add new on admin bar"
-msgid "Verordeningen"
-msgstr ""
-
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:58
-msgctxt "Verordening"
-msgid "Add new Verordening"
-msgstr ""
-
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:59
-msgid "Add new Verordening"
+msgid "Add new verordening"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:60
-msgid "New Verordening"
+msgid "New verordening"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:61
-msgid "Edit Verordening"
+msgid "Edit verordening"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:62
-msgid "View Verordening"
+msgid "View verordening"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:63
-msgid "All Verordeningen"
+msgid "All verordeningen"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:64
-msgid "Search Verordeningen"
+msgid "Search verordeningen"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:65
-msgid "Parent Verordeningen:"
+msgid "Parent verordeningen:"
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:66
-msgid "No Verordeningen found."
+msgid "No verordeningen found."
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:67
-msgid "No Verordeningen found in Trash."
+msgid "No verordeningen found in Trash."
 msgstr ""
 
 #: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:72
