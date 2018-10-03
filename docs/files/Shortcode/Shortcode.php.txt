@@ -75,8 +75,8 @@ class Shortcode
     }
 
     /**
-	 * Merges the settings with defaults, to always have proper settings.
-	 *
+     * Merges the settings with defaults, to always have proper settings.
+     *
      * @param $metaData
      *
      * @return array
@@ -108,7 +108,7 @@ class Shortcode
     }
 
     /**
-     * Return true if date from Verorveningen is smaller or equal to current date.
+     * Return true if date from Verordeningen is smaller or equal to current date.
      *
      * @param $dateActive
      *

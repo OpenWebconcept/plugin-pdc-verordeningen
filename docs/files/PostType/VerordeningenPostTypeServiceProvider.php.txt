@@ -15,8 +15,8 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
 {
 
     /**
-	 * Prefix of the posttype.
-	 *
+     * Prefix of the posttype.
+     *
      * @var string $prefix
      */
     protected $prefix = '_pdc-verordening';
@@ -30,8 +30,8 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-	 *
-	 * @return void
+     *
+     * @return void
      */
     public function register()
     {
@@ -40,8 +40,8 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
 
     /**
      * Register the Verordeningen posttype.
-	 *
-	 * @return void
+     *
+     * @return void
      */
     public function registerPostType()
     {

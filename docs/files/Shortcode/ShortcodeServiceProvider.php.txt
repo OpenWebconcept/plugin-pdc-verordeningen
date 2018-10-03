@@ -14,16 +14,16 @@ class ShortcodeServiceProvider extends ServiceProvider
 {
 
     /**
-	 * Shortcode to be registered.
-	 *
+     * Shortcode to be registered.
+     *
      * @var string $shortcode
      */
     protected static $shortcode = 'pdc::verordeningen';
 
     /**
      * Register the shortcode.
-	 *
-	 * @return void
+     *
+     * @return void
      */
     public function register()
     {
@@ -32,8 +32,8 @@ class ShortcodeServiceProvider extends ServiceProvider
     }
 
     /**
-	 * The generation of the shortcode.
-	 *
+     * The generation of the shortcode.
+     *
      * @param null $id
      *
      * @return string
