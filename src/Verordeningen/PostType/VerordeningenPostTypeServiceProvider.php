@@ -46,30 +46,30 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
     public function registerPostType()
     {
 
-        if (! function_exists('register_extended_post_type')) {
-            require_once($this->plugin->getRootPath() . '/src/Verordeningen/vendor/johnbillion/extended-cpts/extended-cpts.php');
+        if (!function_exists('register_extended_post_type')) {
+            require_once $this->plugin->getRootPath() . '/src/Verordeningen/vendor/johnbillion/extended-cpts/extended-cpts.php';
         }
 
         $labels = [
-            'name'               => _x('Verordeningen', 'post type general name', 'pdc-verordeningen'),
-            'singular_name'      => _x('Verordening', 'post type singular name', 'pdc-verordeningen'),
-            'menu_name'          => _x('Verordeningen', 'admin menu', 'pdc-verordeningen'),
-            'name_admin_bar'     => _x('Verordeningen', 'add new on admin bar', 'pdc-verordeningen'),
-            'add_new'            => _x('Add new Verordening', 'Verordening', 'pdc-verordeningen'),
-            'add_new_item'       => __('Add new Verordening', 'pdc-verordeningen'),
-            'new_item'           => __('New Verordening', 'pdc-verordeningen'),
-            'edit_item'          => __('Edit Verordening', 'pdc-verordeningen'),
-            'view_item'          => __('View Verordening', 'pdc-verordeningen'),
-            'all_items'          => __('All Verordeningen', 'pdc-verordeningen'),
-            'search_items'       => __('Search Verordeningen', 'pdc-verordeningen'),
-            'parent_item_colon'  => __('Parent Verordeningen:', 'pdc-verordeningen'),
-            'not_found'          => __('No Verordeningen found.', 'pdc-verordeningen'),
-            'not_found_in_trash' => __('No Verordeningen found in Trash.', 'pdc-verordeningen')
+            'name'               => __('Verordeningen', 'pdc-verordeningen'),
+            'singular_name'      => __('Verordening', 'pdc-verordeningen'),
+            'menu_name'          => __('Verordeningen', 'pdc-verordeningen'),
+            'name_admin_bar'     => __('Verordeningen', 'pdc-verordeningen'),
+            'add_new'            => __('Add new verordening', 'pdc-verordeningen'),
+            'add_new_item'       => __('Add new verordening', 'pdc-verordeningen'),
+            'new_item'           => __('New verordening', 'pdc-verordeningen'),
+            'edit_item'          => __('Edit verordening', 'pdc-verordeningen'),
+            'view_item'          => __('View verordening', 'pdc-verordeningen'),
+            'all_items'          => __('All verordeningen', 'pdc-verordeningen'),
+            'search_items'       => __('Search verordeningen', 'pdc-verordeningen'),
+            'parent_item_colon'  => __('Parent verordeningen:', 'pdc-verordeningen'),
+            'not_found'          => __('No verordeningen found.', 'pdc-verordeningen'),
+            'not_found_in_trash' => __('No verordeningen found in Trash.', 'pdc-verordeningen'),
         ];
 
         $args = [
             'labels'             => $labels,
-            'description'        => __('PDC Verordeningen', 'pdc-verordeningen'),
+            'description'        => __('Verordeningen', 'pdc-verordeningen'),
             'public'             => false,
             'publicly_queryable' => false,
             'show_ui'            => true,
@@ -83,30 +83,30 @@ class VerordeningenPostTypeServiceProvider extends ServiceProvider
             'show_in_feed'       => false,
             'archive'            => false,
             'admin_cols'         => [
-                'link'        => [
+                'link'         => [
                     'title'    => __('Verordening link', 'pdc-verordeningen'),
                     'meta_key' => "{$this->prefix}-link",
                 ],
-                'new-link'    => [
+                'new-link'     => [
                     'title'    => __('Verordening new link', 'pdc-verordeningen'),
                     'meta_key' => "{$this->prefix}-new-link",
                 ],
                 'active-date'  => [
-                    'title'       => __('Date new Verordening active', 'pdc-verordeningen'),
+                    'title'       => __('Date new verordening active', 'pdc-verordeningen'),
                     'meta_key'    => "{$this->prefix}-active-date",
-                    'date_format' => 'd/m/Y'
+                    'date_format' => 'd/m/Y',
                 ],
                 'code-preview' => [
                     'title'    => __('Verordening shortcode', 'pdc-verordeningen'),
                     'function' => function () {
                         echo ShortcodeServiceProvider::generateShortcode(get_the_ID());
-                    }
+                    },
                 ],
                 'published'    => [
                     'title'       => __('Published', 'pdc-verordeningen'),
                     'post_field'  => 'post_date',
-                    'date_format' => 'd M Y'
-                ]
+                    'date_format' => 'd M Y',
+                ],
             ],
         ];
 
