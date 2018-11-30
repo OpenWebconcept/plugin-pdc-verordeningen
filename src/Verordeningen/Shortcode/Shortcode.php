@@ -18,8 +18,8 @@ class Shortcode
      */
     protected $defaults = [
         '_pdc-verordening-active-date' => null,
-        '_pdc-verordening-link'       => null,
-        '_pdc-verordening-new-link'   => null,
+        '_pdc-verordening-link'        => null,
+        '_pdc-verordening-new-link'    => null,
     ];
 
     /**
@@ -31,27 +31,35 @@ class Shortcode
      */
     public function addShortcode($attributes)
     {
+        if (in_array('--linkonly', array_values($attributes))) {
+            $attributes['linkonly'] = true;
+        }
 
         $attributes = shortcode_atts([
-            'id' => 0
+            'id'       => 0,
+            'linkonly' => false,
         ], $attributes);
 
-        if (! isset($attributes['id']) or empty($attributes['id']) or ( count($attributes['id']) < 1 )) {
+        if (!isset($attributes['id']) or empty($attributes['id']) or (count($attributes['id']) < 1)) {
             return false;
         }
 
-        if (! $this->postExists($attributes['id'])) {
+        if (!$this->postExists($attributes['id'])) {
             return false;
         }
 
         $id         = absint($attributes['id']);
         $metaData   = $this->mergeWithDefaults(get_metadata('post', $id));
-        $link      = $metaData['_pdc-verordening-link'];
-        $newlink   = $metaData['_pdc-verordening-new-link'];
+        $link       = $metaData['_pdc-verordening-link'];
+        $newlink    = $metaData['_pdc-verordening-new-link'];
         $dateActive = $metaData['_pdc-verordening-active-date'];
 
         if ($this->hasDate($dateActive) and $this->dateIsNow($dateActive)) {
             $link = $newlink;
+        }
+
+        if (true === $attributes['linkonly']) {
+            return $link;
         }
 
         $format = apply_filters('owc/pdc/verordeningen/shortcode/format', '<a href="%1$s" class="pdc-verordening-link" title="%2$s">%2$s</a>');
@@ -85,11 +93,11 @@ class Shortcode
     {
         $output = [];
         foreach ($metaData as $key => $data) {
-            if (! in_array($key, array_keys($this->defaults))) {
+            if (!in_array($key, array_keys($this->defaults))) {
                 continue;
             }
 
-            $output[ $key ] = ( ! is_array($data) ) ? $data : $data[0];
+            $output[$key] = (!is_array($data)) ? $data : $data[0];
         }
 
         return $output;
@@ -104,7 +112,7 @@ class Shortcode
      */
     private function hasDate($dateActive)
     {
-        return ! empty($dateActive);
+        return !empty($dateActive);
     }
 
     /**
@@ -116,6 +124,6 @@ class Shortcode
      */
     private function dateIsNow($dateActive)
     {
-        return ( new \DateTime($dateActive) <= new \DateTime('now') );
+        return (new \DateTime($dateActive) <= new \DateTime('now'));
     }
 }
