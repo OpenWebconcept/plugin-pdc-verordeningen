@@ -23,6 +23,9 @@ if (!defined('WPINC')) {
 }
 
 // Don't boot if base plugin is not active.
+if ( ! function_exists('is_plugin_active')) {
+    require_once(ABSPATH.'wp-admin/includes/plugin.php');
+}
 if (!is_plugin_active('pdc-base/pdc-base.php')) {
     return;
 }
