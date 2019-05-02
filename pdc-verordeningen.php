@@ -3,7 +3,7 @@
  * Plugin Name:       PDC Verordeningen
  * Plugin URI:        https://www.openwebconcept.nl
  * Description:       PDC Verordeningen
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
@@ -20,14 +20,6 @@ use OWC\PDC\Verordeningen\Foundation\Plugin;
  */
 if (!defined('WPINC')) {
     die;
-}
-
-// Don't boot if base plugin is not active.
-if ( ! function_exists('is_plugin_active')) {
-    require_once(ABSPATH.'wp-admin/includes/plugin.php');
-}
-if (!is_plugin_active('pdc-base/pdc-base.php')) {
-    return;
 }
 
 /**
