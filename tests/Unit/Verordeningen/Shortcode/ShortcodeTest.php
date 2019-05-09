@@ -3,11 +3,11 @@
 namespace OWC\PDC\Verordeningen\Tests\Config;
 
 use Mockery as m;
+use OWC\PDC\Base\Foundation\Config;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Verordeningen\Shortcode\Shortcode;
 use OWC\PDC\Verordeningen\Tests\Unit\TestCase;
-use OWC\PDC\Base\Foundation\Config;
 
 class TestShortcode extends TestCase
 {
@@ -53,9 +53,11 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_incorrectly_when_id_is_not_set()
     {
-        \WP_Mock::userFunction('shortcode_atts', [
-            'args'   => null,
-            'return' => null
+		\WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [
@@ -75,8 +77,12 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_incorrectly_when_post_does_not_exist()
     {
-        \WP_Mock::passthruFunction('shortcode_atts', [
-            'return_arg' => 1
+        \WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'id'       => 0,
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [
@@ -96,8 +102,12 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_correctly()
     {
-        \WP_Mock::passthruFunction('shortcode_atts', [
-            'return_arg' => 1
+        \WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'id'       => 10,
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [
@@ -139,8 +149,12 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_correctly_when_date_is_not_active()
     {
-        \WP_Mock::passthruFunction('shortcode_atts', [
-            'return_arg' => 1
+        \WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'id'       => 10,
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [
@@ -182,8 +196,12 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_correctly_when_date_is_active_but_link_is_not()
     {
-        \WP_Mock::passthruFunction('shortcode_atts', [
-            'return_arg' => 1
+		\WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'id'       => 10,
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [
@@ -226,8 +244,12 @@ class TestShortcode extends TestCase
     /** @test */
     public function shortcode_is_rendered_correctly_when_date_is_active()
     {
-        \WP_Mock::passthruFunction('shortcode_atts', [
-            'return_arg' => 1
+        \WP_Mock::userFunction('shortcode_atts', [
+            'times'  => 1,
+            'return' => [
+                'id'       => 10,
+                'linkonly' => false,
+            ],
         ]);
 
         \WP_Mock::userFunction('get_post_status', [

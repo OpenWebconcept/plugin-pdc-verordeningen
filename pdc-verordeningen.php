@@ -3,7 +3,7 @@
  * Plugin Name:       PDC Verordeningen
  * Plugin URI:        https://www.openwebconcept.nl
  * Description:       PDC Verordeningen
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
