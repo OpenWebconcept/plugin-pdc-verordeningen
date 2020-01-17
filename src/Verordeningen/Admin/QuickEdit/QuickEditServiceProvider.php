@@ -42,7 +42,6 @@ class QuickEditServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $this->setQuickEditHandlers();
 
         $this->plugin->loader->addAction('quick_edit_custom_box', $this, 'registerQuickEditHandler', 10, 2);
@@ -92,37 +91,37 @@ class QuickEditServiceProvider extends ServiceProvider
         // Ensure jQuery library loads
         wp_enqueue_script('jquery');
         wp_enqueue_style('jquery-ui-datepicker', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css');
-        wp_enqueue_script('jquery-ui-datepicker');
-        ?>
-        <script type="text/javascript">
-            jQuery(function ($) {
-                $(function () {
-                    $('input[name="post_password"]').each(function (i) {
-                    $(this).parent().parent().parent().remove();
-                    });
-                    $('input[name="post_name"]').each(function (i) {
-                        $(this).parent().parent().remove();
-                    });
-                    $('#_pdc-verordening-active-date').datepicker({
-                        altField: "#_pdc-verordening-active-date",
-                        dateFormat: 'dd-mm-yy',
-                        changeMonth: true,
-                        changeYear: true,
-                        showButtonPanel: true,
-                        minDate: 0
-                    });
-                });
-
-                $('#the-list').on('click', 'a.editinline', function (e) {
-                    e.preventDefault();
-                    inlineEditPost.revert();
-                    <?php foreach ($this->quickEditHandlers as $key => $handler) { ?>
-                        var value = $(this).data('<?php echo $key; ?>');
-                        $('#<?php echo $handler['metaboxKey']; ?>').val(value ? value : '');
-                    <?php } ?>
-                });
+        wp_enqueue_script('jquery-ui-datepicker'); ?>
+<script type="text/javascript">
+    jQuery(function($) {
+        $(function() {
+            $('input[name="post_password"]').each(function(i) {
+                $(this).parent().parent().parent().remove();
             });
-        </script>
+            $('input[name="post_name"]').each(function(i) {
+                $(this).parent().parent().remove();
+            });
+            $('#_pdc-verordening-active-date').datepicker({
+                altField: "#_pdc-verordening-active-date",
+                dateFormat: 'dd-mm-yy',
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                minDate: 0
+            });
+        });
+
+        $('#the-list').on('click', '.editinline', function(e) {
+            e.preventDefault();
+            inlineEditPost.revert();
+            <?php foreach ($this->quickEditHandlers as $key => $handler) { ?>
+            var value = $(this).data('<?php echo $key; ?>');
+            $('#<?php echo $handler['metaboxKey']; ?>').val(value ? value : '');
+            <?php } ?>
+        });
+    });
+
+</script>
         <?php
     }
 
@@ -171,10 +170,10 @@ class QuickEditServiceProvider extends ServiceProvider
     protected function ActiveDate($item)
     {
         $value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
-        <label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-            <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
-            <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
-        </label>
+<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
+    <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
+    <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
+</label>
         <?php
     }
 
@@ -188,10 +187,10 @@ class QuickEditServiceProvider extends ServiceProvider
     protected function Link($item)
     {
         $value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
-        <label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-            <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
-            <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
-        </label>
+<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
+    <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
+    <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
+</label>
         <?php
     }
 
@@ -205,10 +204,10 @@ class QuickEditServiceProvider extends ServiceProvider
     protected function NewLink($item)
     {
         $value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
-        <label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-            <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
-            <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
-        </label>
+<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
+    <span class="title"><?php echo __($item['label'], 'pdc-verordeningen'); ?></span>
+    <span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
+</label>
         <?php
     }
 
@@ -245,7 +244,6 @@ class QuickEditServiceProvider extends ServiceProvider
      */
     public function registerSavePostHandler($post_id, $post)
     {
-
         if (wp_is_post_revision($post_id)) {
             return;
         }
