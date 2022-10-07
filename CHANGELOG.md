@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.0.5
+
+### Chore
+
+-   Update dependencies + reference pdc-base plugin from BitBucket to GitHub
+
 ## Version 1.0.4
 
 ### Changed
