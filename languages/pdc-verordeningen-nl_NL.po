@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PDC Verordeningen\n"
-"POT-Creation-Date: 2018-10-03 14:08+0200\n"
+"POT-Creation-Date: 2022-10-21 16:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Edwin Siebel <edwin@yard.nl>\n"
 "Language-Team: Yard Internet <info@yard.nl>\n"
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Revision-Date: Fri Nov 27 2015 13:26:26 GMT+0100 (W. Europe Standard "
 "Time)\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../src\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
@@ -19,106 +19,112 @@ msgstr ""
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: tests\n"
 "X-Poedit-SearchPathExcluded-1: docs\n"
 "X-Poedit-SearchPathExcluded-2: vendor\n"
 "X-Poedit-SearchPathExcluded-3: languages\n"
 
-#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:225
+#: pdc-verordeningen.php:44
+msgid "The following plugins are required to use the PDC Verordeningen:"
+msgstr ""
+"De PDC Verordeningen plugin heeft de volgende plugins nodig om te "
+"functioneren:"
+
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:224
 msgid "New link"
 msgstr "Nieuwe link"
 
-#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:229
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:228
 msgid "Link"
 msgstr "Link"
 
-#: Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:233
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:60
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:95
+#: src/Verordeningen/Admin/QuickEdit/QuickEditServiceProvider.php:232
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:60
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:95
 msgid "Date new verordening active"
 msgstr "Datum actief nieuwe verordening"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:40
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:40
 msgid "Verordening settings"
 msgstr "Verordening instellingen"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:48
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:87
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:48
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:87
 msgid "Verordening link"
 msgstr "Verordening link"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:49
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:55
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:49
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:55
 msgid "URL including http(s)://"
 msgstr "URL inclusief http(s)://"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:54
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:91
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:54
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:91
 msgid "Verordening new link"
 msgstr "Verordening nieuwe link"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:63
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:63
 msgid "dd-mm-yy"
 msgstr "dd-mm-yy"
 
-#: Verordeningen/Metabox/MetaboxServiceProvider.php:70
+#: src/Verordeningen/Metabox/MetaboxServiceProvider.php:70
 msgid "(dd-mm-yy)"
 msgstr "(dd-mm-yy)"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:54
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:56
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:57
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:72
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:54
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:56
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:57
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:72
 msgid "Verordeningen"
 msgstr "Verordeningen"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:55
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:55
 msgid "Verordening"
 msgstr "Verordening"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:58
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:59
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:58
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:59
 msgid "Add new verordening"
 msgstr "Voeg nieuwe verordening toe"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:60
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:60
 msgid "New verordening"
 msgstr "Nieuwe verordening"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:61
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:61
 msgid "Edit verordening"
 msgstr "Bewerk verordening"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:62
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:62
 msgid "View verordening"
 msgstr "Bekijk verordening"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:63
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:63
 msgid "All verordeningen"
 msgstr "Alle verordeningen"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:64
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:64
 msgid "Search verordeningen"
 msgstr "Zoek verordeningen"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:65
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:65
 msgid "Parent verordeningen:"
 msgstr "Hoofd verordeningen pagina:"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:66
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:66
 msgid "No verordeningen found."
 msgstr "Geen verordeningen gevonden."
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:67
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:67
 msgid "No verordeningen found in Trash."
 msgstr "Geen verordeningen gevonden in prullenbak."
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:100
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:100
 msgid "Verordening shortcode"
 msgstr "Verordening shortcode"
 
-#: Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:106
+#: src/Verordeningen/PostType/VerordeningenPostTypeServiceProvider.php:106
 msgid "Published"
 msgstr "Gepubliceerd"
