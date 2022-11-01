@@ -1,0 +1,19 @@
+name: "plugin-pdc-verordeningen"
+
+publiccodeYmlVersion: 1.0
+url: "https://github.com/OpenWebconcept/plugin-pdc-verordeningen"
+
+platforms:
+  - "web"
+
+categories:
+  - "application-development"
+
+softwareType: "softwareAddon"
+
+description:
+  localisedName: "PDC Verordeningen"
+
+nl:
+  commonground:
+    layerType: "service"
