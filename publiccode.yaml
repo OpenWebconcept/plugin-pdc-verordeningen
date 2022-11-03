@@ -6,6 +6,8 @@ applicationSuite:
 publiccodeYmlVersion: 1.0
 url: "https://github.com/OpenWebconcept/plugin-pdc-verordeningen"
 
+softwareVersion: 1.0.5
+
 platforms:
   - "web"
 
@@ -16,11 +18,15 @@ softwareType: "softwareAddon"
 
 description:
   localisedName: "PDC Verordeningen"
+  
+legal:
+	license: "GPL-3.0"
 
 nl:
   commonground:
     layerType: "service"
-    dependsOn:
+	
+dependsOn:
   open:
     - name: "pdc-base"
     - versionMin: 3.4.7
