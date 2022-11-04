@@ -31,4 +31,4 @@ dependsOn:
     - name: "pdc-base"
     - versionMin: 3.4.7
     - name: "WordPress"
-    - versionMin: 6.0.3
+    - versionMin: 6
