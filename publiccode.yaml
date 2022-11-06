@@ -1,0 +1,34 @@
+name: "plugin-pdc-verordeningen"
+
+applicationSuite:
+  name: "OpenWebconcept"
+
+publiccodeYmlVersion: 1.0
+url: "https://github.com/OpenWebconcept/plugin-pdc-verordeningen"
+
+softwareVersion: 1.0.5
+
+platforms:
+  - "web"
+
+categories:
+  - "application-development"
+
+softwareType: "softwareAddon"
+
+description:
+  localisedName: "PDC Verordeningen"
+  
+legal:
+	license: "GPL-3.0"
+
+nl:
+  commonground:
+    layerType: "service"
+	
+dependsOn:
+  open:
+    - name: "pdc-base"
+    - versionMin: 3.4.7
+    - name: "WordPress"
+    - versionMin: 6
