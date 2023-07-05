@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.0.6
+
+### Chore
+
+-   Don't require the pdc-base plugin in composer.json
+
 ## Version 1.0.5
 
 ### Chore
