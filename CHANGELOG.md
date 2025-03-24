@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## Version 1.0.8
+
+### Fix
+
+-   Autoloader
+
+## Version 1.0.7
+
+### Fix
+
+-   Text domain
+
 ## Version 1.0.6
 
 ### Chore

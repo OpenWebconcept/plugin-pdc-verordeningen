@@ -4,7 +4,7 @@
  * Plugin Name:       PDC Verordeningen
  * Plugin URI:        https://www.openwebconcept.nl
  * Description:       PDC Verordeningen
- * Version:           1.0.6
+ * Version:           1.0.8
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
@@ -24,10 +24,17 @@ if (!defined('WPINC')) {
 }
 
 /**
- * manual loaded file: the autoloader.
+ * Autoload plugin files if not already loaded
  */
-require_once __DIR__ . '/autoloader.php';
-$autoloader = new Autoloader();
+if (! class_exists(\OWC\PDC\Verordeningen\Foundation\Plugin::class)) {
+    $composerAutoload = __DIR__ . '/vendor/autoload.php';
+    if (file_exists($composerAutoload)) {
+        require_once $composerAutoload;
+    } else {
+        require_once __DIR__ . '/autoloader.php';
+        $autoloader = new Autoloader();
+    }
+}
 
 /**
  * Begin execution of the plugin
@@ -37,7 +44,7 @@ $autoloader = new Autoloader();
  * and wp_loaded action hooks.
  */
 add_action('plugins_loaded', function () {
-	add_action('after_setup_theme', function () {
-		(new Plugin(__DIR__))->boot();
-	});
+    add_action('after_setup_theme', function () {
+        (new Plugin(__DIR__))->boot();
+    });
 }, 10);
